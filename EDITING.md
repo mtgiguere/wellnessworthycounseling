@@ -70,6 +70,48 @@ Open `resources.html`, find the list of links, copy one whole line that starts
 with `<li>` and ends with `</li>`, paste it below the others, then change the
 web address (the part in quotes after `href=`) and the visible words.
 
+## Optional: putting the website on your own computer ("cloning")
+
+Everything above happens on the GitHub website, and honestly that's all you
+ever *need*. But you can also keep a copy of the site on your computer —
+useful if you want to preview changes before they go live, edit lots of
+things at once, or use an AI assistant. This is called **cloning**, and it
+doesn't move anything — GitHub stays the "real" copy; your computer gets a
+linked twin.
+
+The friendly way is an app called **GitHub Desktop**:
+
+1. Download it free from **desktop.github.com**, install it, and sign in
+   with your GitHub account.
+2. Click **File → Clone repository**, pick
+   **`wellnessworthycounseling`** from the list, and click **Clone**.
+   That's it — the whole website is now in a folder on your computer
+   (it tells you where; usually Documents\GitHub).
+3. **To preview the site:** open that folder and double-click
+   `index.html`. It opens in your web browser, working exactly like the
+   real site — photos, pages, everything. No internet required.
+4. **To edit:** open any `.html` file in a text editor (Notepad works;
+   a free app called VS Code is nicer), change your words, save, and
+   refresh the browser to see it instantly.
+5. **To publish your changes:** go back to GitHub Desktop. It shows a
+   list of everything you changed. Type a short note in the "Summary" box
+   (e.g. "updated my bio"), click **Commit to main**, then click
+   **Push origin** at the top. A minute later it's on the live site.
+6. **Before each editing session**, click **Fetch origin → Pull** in
+   GitHub Desktop first, so your computer picks up any changes made
+   elsewhere (like edits you did on the GitHub website, or Matt's fixes).
+
+Two nice things about this setup:
+
+- **You can't lose work.** Until you click Push, nothing you do on your
+  computer touches the live site. Mess something up? GitHub Desktop has a
+  "discard changes" option that puts files back the way they were.
+- **AI assistants understand this website.** If you use one on your
+  computer (Claude, GitHub Copilot, etc.), just open the website's folder
+  and ask for what you want in plain English — there's an instruction file
+  in the folder (`AGENTS.md`) that they read automatically, which tells
+  them how this site works and what not to break.
+
 ## Things to ask Matt for help with
 
 - Renaming or adding a whole page (the menu appears in all five files)
