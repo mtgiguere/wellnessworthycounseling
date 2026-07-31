@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ✏️ This is the title shown in the browser tab and in Google results -->
+  <title>Wellness Worthy Counseling</title>
+  <meta name="description" content="Compassionate, evidence-based counseling for individuals and couples.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR — the same menu appears on every page.
+       If you rename a page, change it here AND in the other
+       four .html files (index, services, digital-awareness,
+       resources, about).
+       ============================================================ -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="current">Wellness Worthy Counseling</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="digital-awareness.html">Digital Awareness</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       TOP SECTION — big headline + your intro + your photo.
+       ✏️ Edit the text between the tags below.
+       📷 To change the photo: upload your picture to the "images"
+          folder with the exact name  index.jpg  (every page's picture
+          is named after the page — no other edits needed).
+       ============================================================ -->
+  <div class="wrap two-col">
+    <div>
+      <h1>You are Worthy to be Well.</h1>
+
+      <!-- ✏️ YOUR INTRO PARAGRAPH GOES HERE (placeholder joke for now) -->
+      <p>
+        Hi! I'm a placeholder paragraph. One day soon this will describe your
+        counseling practice, your training, and the people you help. Until then,
+        please enjoy some words of wisdom from a six-year-old and his tiger:
+      </p>
+      <blockquote>
+        "It's a magical world, Hobbes, ol' buddy... let's go exploring!"
+        <cite>— Calvin</cite>
+      </blockquote>
+      <p>
+        Replace all of this with your real introduction whenever you're ready.
+        Talk about who you are, who you help, and what makes your practice
+        special. Write it like you're talking to one nervous person who just
+        found your website at 11pm.
+      </p>
+
+      <!-- ✏️ The button below — point it at your scheduling page or email -->
+      <p><a class="button" href="mailto:hello@wellnessworthycounseling.com">I am ready</a></p>
+    </div>
+
+    <div>
+      <!-- If images/index.jpg is deleted, this photo (and its empty
+           space) disappear automatically — that's what onerror does. -->
+      <img src="images/index.jpg" alt="Portrait photo"
+           onerror="if(this.closest('.two-col')){this.closest('.two-col').classList.add('no-photo')}this.remove()">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CHECKLIST SECTION — three reassuring points.
+       ✏️ Edit the heading, subtitle, and the three items below.
+       ============================================================ -->
+  <section class="checklist">
+    <h2>Worried about starting counseling?</h2>
+    <p class="subtitle">Whether it is your first time or you are trying again, it can be overwhelming.</p>
+    <hr>
+    <div class="check-items">
+      <div>
+        <div class="mark">✓</div>
+        <p>Believe improvement is possible and you are worth the time, effort, and cost.</p>
+      </div>
+      <div>
+        <div class="mark">✓</div>
+        <p>Know that scheduling and attending the first session is the hardest part.</p>
+      </div>
+      <div>
+        <div class="mark">✓</div>
+        <p>Expect the first session to begin with... "What brings you in today?"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BIG BANNER FOOTER — appears on every page.
+       ============================================================ -->
+  <div class="banner">Wellness Worthy Counseling</div>
+
+</body>
+</html>

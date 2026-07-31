@@ -1,0 +1,180 @@
+/* ============================================================
+   WELLNESS WORTHY COUNSELING — style.css
+   This file controls how the whole site LOOKS (colors, fonts,
+   spacing). You should not need to edit this file to change
+   your text or photos — do that in the .html pages instead.
+   ============================================================ */
+
+/* ---- Colors used across the site (change once, changes everywhere) ---- */
+:root {
+  --taupe: #a99f8f;        /* nav bar + banner background */
+  --taupe-dark: #8f8574;   /* hover shade */
+  --ink: #2e2e2e;          /* main text color */
+  --ink-soft: #4a4a4a;     /* paragraph text */
+  --paper: #ffffff;        /* page background */
+  --cloud: #f4f2ee;        /* soft button / card background */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  color: var(--ink-soft);
+  background: var(--paper);
+  line-height: 1.7;
+}
+
+/* ---- Optional background image ----
+   If a file named  images/background.jpg  exists, it shows faintly
+   behind every page. If the file doesn't exist, nothing happens.
+   To make it stronger or fainter, change "opacity" below
+   (0 = invisible, 1 = full strength). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("../images/background.jpg") center / cover no-repeat;
+  opacity: 0.12;
+}
+
+h1, h2, h3, .banner {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--taupe-dark); }
+
+/* ---------------- Navigation bar ---------------- */
+nav {
+  background: var(--taupe);
+  padding: 1.6rem 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+
+nav a:hover, nav a.current { border-bottom: 2px solid #ffffff; padding-bottom: 4px; }
+
+/* ---------------- Page layout helpers ---------------- */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Two columns: text on the left, photo on the right.
+   Stacks into one column on phones automatically. */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* If a page's photo file has been deleted, the photo column
+   collapses and the text uses the full width. */
+.two-col.no-photo { grid-template-columns: 1fr; max-width: 800px; }
+
+.two-col h1 { font-size: 2.8rem; margin-bottom: 1.5rem; }
+
+.two-col img { border-radius: 12px; }
+
+/* ---------------- Buttons ---------------- */
+.button {
+  display: inline-block;
+  background: var(--cloud);
+  color: var(--ink);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.button:hover { background: var(--taupe); color: #ffffff; }
+
+/* ---------------- Checklist section ---------------- */
+.checklist { text-align: center; padding: 4rem 1.5rem; }
+
+.checklist h2 { font-size: 2.2rem; letter-spacing: 0.08em; margin-bottom: 1rem; }
+
+.checklist .subtitle { margin-bottom: 1.5rem; }
+
+.checklist hr {
+  width: 80px;
+  margin: 0 auto 3rem auto;
+  border: none;
+  border-top: 2px solid var(--ink);
+}
+
+.check-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .check-items { grid-template-columns: 1fr; }
+}
+
+.check-items .mark {
+  font-size: 1.6rem;
+  background: var(--ink);
+  color: #ffffff;
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  border-radius: 8px;
+  margin: 0 auto 1rem auto;
+}
+
+/* ---------------- Big banner footer ---------------- */
+.banner {
+  background: var(--taupe);
+  text-align: center;
+  padding: 5rem 1rem;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  letter-spacing: 0.05em;
+}
+
+/* ---------------- Simple content pages ---------------- */
+.page h1 { font-size: 2.6rem; margin-bottom: 1.5rem; }
+.page h2 { font-size: 1.6rem; margin: 2.5rem 0 0.8rem 0; }
+.page p, .page li { margin-bottom: 1rem; }
+.page ul { padding-left: 1.4rem; }
+
+blockquote {
+  border-left: 4px solid var(--taupe);
+  background: var(--cloud);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+blockquote cite { display: block; margin-top: 0.5rem; font-style: normal; font-size: 0.9rem; }
