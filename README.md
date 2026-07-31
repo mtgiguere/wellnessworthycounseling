@@ -15,6 +15,13 @@ You only ever do it once.
 There are two halves: turning the website **on** (GitHub's side) and pointing
 your **domain name** at it (your domain company's side).
 
+> **📌 One rule that matters for every step below:** wherever these
+> instructions say `mtgiguere`, that's the GitHub username of the account
+> this website lives under. If this repository moves to **your** GitHub
+> account, use **your username** instead — e.g. the address becomes
+> `yourusername.github.io` — and it's *your* copy's Settings → Pages that
+> must be turned on. Everything else stays exactly the same.
+
 > ### ⚠️ Read this first: your old site stays up until Part 2
 >
 > Right now, www.wellnessworthycounseling.com shows your **existing Teachery
