@@ -3,6 +3,9 @@
 Hi! This is your website. Everything in it is a plain file you can edit
 yourself — no coding knowledge needed. Here's the cheat sheet.
 
+(Looking for the one-time setup that puts the site on your domain?
+That's in [GOING-LIVE.md](GOING-LIVE.md).)
+
 ## The 60-second version
 
 1. Go to your website's page on **github.com** and log in.
