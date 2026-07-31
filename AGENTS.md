@@ -26,6 +26,14 @@ If she asks for something that genuinely needs those (a blog, a booking
 system), explain the trade-off in plain English first and suggest an
 external service (Calendly, etc.) linked from the site instead.
 
+**Her courses live on Teachery** (her account at teachery.co). Requests
+like "link to my Digital Awareness course" are exactly right for this
+site: just point a button or link (e.g. the ones on
+`digital-awareness.html`) at the course's Teachery URL — ask her for the
+URL if she hasn't given it. Same goes for scheduling: the "I am ready"
+buttons currently use a placeholder `mailto:`; swapping in her real
+scheduler or email link is a one-line edit, not a rebuild.
+
 ## How the site is organized
 
 | File | What it is |
