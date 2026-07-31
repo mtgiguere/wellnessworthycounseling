@@ -15,6 +15,25 @@ You only ever do it once.
 There are two halves: turning the website **on** (GitHub's side) and pointing
 your **domain name** at it (your domain company's side).
 
+> ### ⚠️ Read this first: your old site stays up until Part 2
+>
+> Right now, www.wellnessworthycounseling.com shows your **existing Teachery
+> site**. It will keep showing it until you do Part 2 below — and the moment
+> you do Part 2, visitors see **this new site instead**. There's no
+> in-between.
+>
+> So the smart order is:
+>
+> 1. Do **Part 1** now. That publishes a *preview* of the new site at
+>    **https://mtgiguere.github.io/wellnessworthycounseling** without
+>    touching your real domain.
+> 2. Take your time replacing the placeholder text and photos
+>    (see [EDITING.md](EDITING.md)) until the preview looks right.
+> 3. Do **Part 2** when you're ready to go live for real.
+>
+> And if you ever regret it: Part 2 is fully reversible (see the last
+> section of this page).
+
 ### Part 1 — Turn the website on (GitHub)
 
 1. Log in at **github.com** and open the `wellnessworthycounseling` repository.
@@ -35,21 +54,30 @@ Squarespace Domains, etc.) and find the **DNS settings** (sometimes called
 "DNS records", "Manage DNS", or "Advanced DNS") for
 wellnessworthycounseling.com.
 
-Add these records. The names and buttons vary a little by company, but every
-one of them has these same fields:
+The names and buttons vary a little by company, but every one of them has
+these same fields.
 
-**Record 1 — makes www.wellnessworthycounseling.com work:**
+**Step 1 — Edit your existing `www` record (this is the switch-over moment).**
+In your DNS records you'll find one that looks like this — it's what points
+your domain at Teachery today:
 
-| Field | What to enter |
-|---|---|
-| Type | `CNAME` |
-| Host / Name | `www` |
-| Value / Points to | `mtgiguere.github.io` |
-| TTL | leave the default |
+| Type | Host / Name | Value (currently) |
+|---|---|---|
+| `CNAME` | `www` | `www.teachery.co` |
 
-**Records 2–5 — makes wellnessworthycounseling.com (without the www) work.**
-Add four records of type `A`, all with Host/Name set to `@` (which means
-"the bare domain"), one for each of these values:
+Click edit on that record and change **only the value** to:
+
+| Type | Host / Name | Value (new) |
+|---|---|---|
+| `CNAME` | `www` | `mtgiguere.github.io` |
+
+That single edit is the whole switch. Saving it takes your Teachery site
+off the domain and puts the new site on it (within the hour).
+
+**Step 2 — Add four records so wellnessworthycounseling.com (without the
+www) also works.** These are brand new — the "Add record" button. All four
+are type `A`, with Host/Name set to `@` (which means "the bare domain"),
+one for each of these values:
 
 | Type | Host / Name | Value |
 |---|---|---|
@@ -58,9 +86,8 @@ Add four records of type `A`, all with Host/Name set to `@` (which means
 | `A` | `@` | `185.199.110.153` |
 | `A` | `@` | `185.199.111.153` |
 
-⚠️ If there are already `A` or `CNAME` records on `@` or `www` (domain
-companies often pre-fill a "parking page"), delete those old ones — they'll
-fight with the new ones.
+(If there are already other `A` or `CNAME` records sitting on `@`, delete
+those old ones — they'll fight with the new ones.)
 
 ### Part 3 — Wait, then flip on the padlock
 
@@ -84,3 +111,11 @@ fight with the new ones.
   yet. See Part 3, step 2.
 - Anything else → text Matt. This setup only happens once; nothing you do
   while editing the site day-to-day can undo it.
+
+### Changed your mind? Going back to Teachery
+
+The switch is not a one-way door. To put your old Teachery site back on the
+domain, edit that same `www` record from Part 2 and change its value from
+`mtgiguere.github.io` back to **`www.teachery.co`**. The old site returns
+within the hour. (This only works while your Teachery account is still
+active, so don't cancel Teachery until you're sure you're happy.)
