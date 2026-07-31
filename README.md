@@ -1,13 +1,21 @@
-# Getting Your Website Live 🚀
+# Wellness Worthy Counseling 💐
 
-This is the one-time setup that connects your website files to your domain,
-**www.wellnessworthycounseling.com**. You only ever do this once. After that,
-day-to-day editing is covered in [EDITING.md](EDITING.md).
+This is the website for **www.wellnessworthycounseling.com**. There are only
+two things to know:
+
+- **Editing your site day-to-day** (changing words, swapping photos) →
+  see [EDITING.md](EDITING.md)
+- **Getting it live the first time** → that's the rest of this page, below.
+
+## Getting Your Website Live 🚀
+
+This is the one-time setup that connects your website files to your domain.
+You only ever do it once.
 
 There are two halves: turning the website **on** (GitHub's side) and pointing
 your **domain name** at it (your domain company's side).
 
-## Part 1 — Turn the website on (GitHub)
+### Part 1 — Turn the website on (GitHub)
 
 1. Log in at **github.com** and open the `wellnessworthycounseling` repository.
 2. Click **Settings** (the gear tab at the top of the repository).
@@ -20,7 +28,7 @@ your **domain name** at it (your domain company's side).
    website). If it's empty, type it in and click **Save**.
 6. Leave this tab open — you'll come back after Part 2.
 
-## Part 2 — Point your domain at it (your domain company)
+### Part 2 — Point your domain at it (your domain company)
 
 Log in to the company where you bought the domain (GoDaddy, Namecheap,
 Squarespace Domains, etc.) and find the **DNS settings** (sometimes called
@@ -54,7 +62,7 @@ Add four records of type `A`, all with Host/Name set to `@` (which means
 companies often pre-fill a "parking page"), delete those old ones — they'll
 fight with the new ones.
 
-## Part 3 — Wait, then flip on the padlock
+### Part 3 — Wait, then flip on the padlock
 
 1. DNS changes take anywhere from a few minutes to a day to spread across
    the internet. Usually it's under an hour. Go have a coffee. ☕
@@ -65,7 +73,7 @@ fight with the new ones.
    out, wait and refresh; it sorts itself out.
 3. Visit **www.wellnessworthycounseling.com** — that's your website!
 
-## If something's not working
+### If something's not working
 
 - **"Domain's DNS record could not be retrieved"** on GitHub → the DNS
   records from Part 2 haven't spread yet, or a Host/Name field has a typo.
